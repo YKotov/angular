@@ -4,6 +4,12 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
+import { LogoComponent } from './logo/logo.component';
+import { CoursPageComponent } from './cours-page/cours-page.component';
+import { BreadcrumbsComponent } from './breadcrumbs/breadcrumbs.component';
+import { SearchComponent } from './search/search.component';
+import { AddMoreComponent } from './add-more/add-more.component';
+import { CoursContentComponent } from './cours-content/cours-content.component';
 
 
 @NgModule({
@@ -11,6 +17,12 @@ import { FooterComponent } from './footer/footer.component';
     AppComponent,
     HeaderComponent,
     FooterComponent,
+    LogoComponent,
+    CoursPageComponent,
+    BreadcrumbsComponent,
+    SearchComponent,
+    AddMoreComponent,
+    CoursContentComponent,
 
   ],
   imports: [
