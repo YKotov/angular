@@ -1,0 +1,34 @@
+.content-item{
+  display: flex;
+  min-height: 75px;
+  width: 100%;
+  border: 1px solid;
+  margin-bottom: 10px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.left-part{
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+}
+.right-part{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  justify-content: space-around;
+  width: 20%;
+}
+.head-part{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.head-part div{
+  display: flex;
+  justify-content: space-between;
+  width: 20%;
+}

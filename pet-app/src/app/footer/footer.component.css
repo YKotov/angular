@@ -2,7 +2,7 @@ footer {
   display: flex;
   border-top: 1px solid;
   padding: 5px 0;
-  position:absolute;
+  /*position:absolute;*/
   bottom:0;
   width:100%;
 }
