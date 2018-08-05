@@ -12,7 +12,7 @@ import {AddMoreComponent} from './add-more/add-more.component';
 import {CourseContentComponent} from './course-content/course-content.component';
 import {HttpClientModule} from '@angular/common/http';
 import {CourseItemService} from './course-item.service';
-import { LoadmoreComponent } from './loadmore/loadmore.component';
+import {LoadmoreComponent} from './loadmore/loadmore.component';
 
 
 @NgModule({

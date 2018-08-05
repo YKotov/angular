@@ -1,5 +1,5 @@
 import {Injectable} from '@angular/core';
-import {Courses} from './courses';
+import {ICourses} from './ICourses';
 import {HttpClient} from '@angular/common/http';
 import {Observable} from 'rxjs';
 
@@ -14,7 +14,7 @@ export class CourseItemService {
   }
 
 
-  getCourseItem(): Observable<Courses[]> {
-    return this.http.get<Courses[]>(this.dataJ);
+  getCourseItem(): Observable<ICourses[]> {
+    return this.http.get<ICourses[]>(this.dataJ);
   }
 }

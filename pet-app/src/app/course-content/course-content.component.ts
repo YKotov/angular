@@ -1,24 +1,24 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {Courses} from '../courses';
+import {ICourses} from '../ICourses';
 import {CourseItemService} from '../course-item.service';
 
 @Component({
-  selector: 'app-cours-content',
+  selector: 'app-course-content',
   templateUrl: './course-content.component.html',
   styleUrls: ['./course-content.component.css'],
 })
 
 export class CourseContentComponent implements OnInit {
 
-  @Input('courses') courses: Courses;
+  // @Input('courses') courses: ICourses;
 
-  public coursItemArr = [];
+  public courseItemArr = [];
 
-  constructor(private coursItem: CourseItemService) {
+  constructor(private courseItem: CourseItemService) {
   }
 
   ngOnInit() {
-    this.coursItem.getCourseItem().subscribe(data => this.coursItemArr = data);
+    this.courseItem.getCourseItem().subscribe(data => this.courseItemArr = data);
   }
 
 }
