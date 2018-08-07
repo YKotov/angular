@@ -1,3 +1,8 @@
+.actions-wrapp{
+  display: flex;
+  justify-content: space-between;
+}
+
 .search{
   width: 400px;
   margin-right: 40px;

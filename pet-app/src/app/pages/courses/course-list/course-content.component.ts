@@ -1,6 +1,5 @@
-import {Component, Input, OnInit} from '@angular/core';
-import {ICourses} from '../ICourses';
-import {CourseItemService} from '../course-item.service';
+import {Component, OnInit} from '@angular/core';
+import {CourseItemService} from './course-item.service';
 
 @Component({
   selector: 'app-course-content',
@@ -9,8 +8,6 @@ import {CourseItemService} from '../course-item.service';
 })
 
 export class CourseContentComponent implements OnInit {
-
-  // @Input('courses') courses: ICourses;
 
   public courseItemArr = [];
 
