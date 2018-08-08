@@ -1,0 +1,10 @@
+.course{
+  display: flex;
+  justify-content: space-between;
+}
+
+
+article.breadcrumbs{
+  border-bottom: 1px solid;
+}
+

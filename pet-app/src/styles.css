@@ -1,1 +1,38 @@
 /* You can add global styles to this file, and also import other style files */
+html,body{
+  padding: 0;
+  margin: 0;
+  height: 100%;
+}
+
+h3,h4{
+  margin: 0;
+}
+
+.container{
+  display: flex;
+  justify-content: space-around;
+  max-width: 1090px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+button{
+  cursor: pointer;
+  height: 30px;
+  width: 100px;
+  border: 1px solid;
+  color: black;
+  background: aquamarine;
+  margin: 0 10px;
+}
+
+
+article{
+  padding: 20px;
+}
+
+.logo img{
+  height: 50px;
+}
+
