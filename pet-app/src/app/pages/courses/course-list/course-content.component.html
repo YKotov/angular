@@ -13,6 +13,6 @@
   </div>
   <div class="right-part">
     <button>Edit</button>
-    <button>Delete</button>
+    <button (consoledElement)="item._id=$event" (click)=" deleteItem()">Delete</button>
   </div>
 </div>

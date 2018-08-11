@@ -1,4 +1,4 @@
-import {Input, NgModule} from '@angular/core';
+import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {CoursePageComponent} from './course-page.component';
 import {BreadcrumbsComponent} from './breadcrumbs/breadcrumbs.component';
@@ -21,7 +21,6 @@ import {FormsModule} from '@angular/forms';
   imports: [
     CommonModule,
     HttpClientModule,
-    Input,
     FormsModule
   ],
   exports: [
