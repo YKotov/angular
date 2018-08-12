@@ -11,15 +11,14 @@ import {forEach} from '@angular/router/src/utils/collection';
 export class CourseContentComponent implements OnInit {
 
   public courseItemArr = [];
-  public _id = '2';
   @Output() public consoledElement: any = new EventEmitter();
 
 
   constructor(private courseItem: CourseItemService) {
   }
 
-  deleteItem() {
-    this.consoledElement.emit(console.log(this.courseItemArr[this._id]._id));
+  deleteItemID = (event: any) => {
+    console.log('id: ' + event);
   }
 
   ngOnInit() {
