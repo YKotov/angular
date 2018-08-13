@@ -12,19 +12,14 @@ import {
 export class SearchComponent implements OnInit {
 
   public consoledElement: any;
-  public counter = 0;
-
-  loggin() {
-    this.consoledElement.log('#' + this.counter + ' ' + this.consoledElement.data);
-    if (this.consoledElement.data !== '' ) {
-      this.consoledElement.data = null ? 'empty' : '';
-      this.counter += 1;
-    }
+  logging() {
+    this.consoledElement.log(this.consoledElement.data);
+    this.consoledElement.data = null ? 'empty' : '';
   }
 
   constructor() {
     this.consoledElement = console;
-    this.loggin();
+    this.logging();
   }
 
   ngOnInit() {

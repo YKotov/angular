@@ -3,11 +3,12 @@ import {CommonModule} from '@angular/common';
 import {CoursePageComponent} from './course-page.component';
 import {BreadcrumbsComponent} from './breadcrumbs/breadcrumbs.component';
 import {SearchComponent} from './search/search.component';
-import {CourseContentComponent} from './course-list/course-content.component';
+import {CourseListComponent} from './course-list/course-list.component';
 import {LoadmoreComponent} from './loadmore/loadmore.component';
-import {CourseItemService} from './course-list/course-item.service';
+import {CourseListService} from './course-list/course-list.service';
 import {HttpClientModule} from '@angular/common/http';
 import {FormsModule} from '@angular/forms';
+import {CrsDetailComponent} from './course-list/crs-detail/crs-detail.component';
 
 
 @NgModule({
@@ -15,8 +16,9 @@ import {FormsModule} from '@angular/forms';
     CoursePageComponent,
     BreadcrumbsComponent,
     SearchComponent,
-    CourseContentComponent,
-    LoadmoreComponent
+    CourseListComponent,
+    LoadmoreComponent,
+    CrsDetailComponent
   ],
   imports: [
     CommonModule,
@@ -26,7 +28,7 @@ import {FormsModule} from '@angular/forms';
   exports: [
     CoursePageComponent
   ],
-  providers: [CourseItemService]
+  providers: [CourseListService]
 })
 export class CourseModule {
 }
