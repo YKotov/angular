@@ -1,10 +1,10 @@
-import {ICourses} from '../ICourses';
 import {HttpClient} from '@angular/common/http';
 import {Observable} from 'rxjs';
 import {Injectable} from '@angular/core';
+import {Course} from '../../../models/course';
 
 @Injectable()
-export class CourseItemService {
+export class CourseListService {
 
   private dataJ = '/assets/data/generated.json';
 
@@ -12,7 +12,7 @@ export class CourseItemService {
   }
 
 
-  getCourseItem(): Observable<ICourses[]> {
-    return this.http.get<ICourses[]>(this.dataJ);
+  getCourseItem(): Observable<Course[]> {
+    return this.http.get<Course[]>(this.dataJ);
   }
 }

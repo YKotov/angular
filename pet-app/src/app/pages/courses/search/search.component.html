@@ -1,7 +1,7 @@
 <div class="actions-wrapp">
   <div class="search-wrapp">
-    <input type="text" placeholder="Name, topic or date" class="search">
-    <button>Search</button>
+    <input type="text" [(ngModel)]="consoledElement.data"  placeholder="Name, topic or date" class="search">
+    <button (click)="logging()">Search</button>
   </div>
   <div class="add-more">
     <button>Add more!</button>
