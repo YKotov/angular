@@ -19,7 +19,17 @@ describe('HeaderComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it('should create Header', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should render img', async(() => {
+    const compiled = fixture.debugElement.nativeElement;
+    expect(compiled.querySelector('img').textContent);
+  }));
+
+  it('should render div', async(() => {
+    const compiled = fixture.debugElement.nativeElement;
+    expect(compiled.querySelector('div').textContent);
+  }));
 });
