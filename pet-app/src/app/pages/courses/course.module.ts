@@ -9,7 +9,7 @@ import {CourseListService} from './course-list/course-list.service';
 import {HttpClientModule} from '@angular/common/http';
 import {FormsModule} from '@angular/forms';
 import {CrsDetailComponent} from './course-list/crs-detail/crs-detail.component';
-import { ActualizationCrsDirective } from './course-list/actualization-crs.directive';
+import { ActualizationCrsDirective } from './course-list/crs-detail/actualization-crs.directive';
 
 
 @NgModule({
