@@ -2,7 +2,7 @@ export interface ICourses {
   _id: number;
   index: number;
   title: string;
-  data: any | Date;
+  data: any;
   duration: number;
   description: string;
 }

@@ -1,4 +1,4 @@
-import {Directive, ElementRef, Injectable, Input} from '@angular/core';
+import {Directive, ElementRef, Injectable, Input, OnInit} from '@angular/core';
 import {Course} from '../../../../models/course';
 import {CourseListService} from '../course-list.service';
 
@@ -7,18 +7,25 @@ import {CourseListService} from '../course-list.service';
 })
 
 
-export class ActualizationCrsDirective {
-  private currentDate: Date = new Date();
+export class ActualizationCrsDirective implements OnInit {
+  private currentDate: any = new Date();
   @Input('appActualizationCrs') appActualizationCrs: Course['data'];
 
-  constructor(el: ElementRef) {
-    console.log(this.appActualizationCrs);
+  constructor(private el: ElementRef) {}
+  ngOnInit() {
+    const current = Date.parse(this.currentDate);
+    const element = Date.parse(this.appActualizationCrs);
 
-    if (this.currentDate <= this.appActualizationCrs) {
-      el.nativeElement.style.borderColor = 'green';
-    } else {
-      el.nativeElement.style.borderColor = 'red';
+    if (current <= element) {
+     console.log(element);
+      this.highlight('red', '6px');
     }
   }
 
+
+
+  private highlight(color: string, width: string) {
+    this.el.nativeElement.style.borderColor = color;
+    this.el.nativeElement.style.borderWidth = width;
+  }
 }

@@ -5,7 +5,7 @@ export class Course implements ICourses {
   _id: 0;
   index: 0;
   title: '';
-  data: Date;
+  data: '';
   duration: 0;
   description: '';
 }
