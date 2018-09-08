@@ -9,6 +9,7 @@ import {CourseListService} from './course-list/course-list.service';
 import {HttpClientModule} from '@angular/common/http';
 import {FormsModule} from '@angular/forms';
 import {CrsDetailComponent} from './course-list/crs-detail/crs-detail.component';
+import { ActualizationCrsDirective } from './course-list/actualization-crs.directive';
 
 
 @NgModule({
@@ -18,17 +19,18 @@ import {CrsDetailComponent} from './course-list/crs-detail/crs-detail.component'
     SearchComponent,
     CourseListComponent,
     LoadmoreComponent,
-    CrsDetailComponent
+    CrsDetailComponent,
+    ActualizationCrsDirective
   ],
   imports: [
     CommonModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
   ],
   exports: [
-    CoursePageComponent
+    CoursePageComponent,
   ],
-  providers: [CourseListService]
+  providers: [CourseListService, ActualizationCrsDirective]
 })
 export class CourseModule {
 }
