@@ -12,6 +12,8 @@ import {CrsDetailComponent} from './course-list/crs-detail/crs-detail.component'
 import { ActualizationCrsDirective } from './course-list/crs-detail/actualization-crs.directive';
 import { CourseLoadDirective } from './loadmore/course-load.directive';
 import { RateDirective } from './course-list/crs-detail/rate.directive';
+import { DurationPipe } from './course-list/crs-detail/duration.pipe';
+import { FilterPipe } from './search/filter.pipe';
 
 
 @NgModule({
@@ -24,7 +26,9 @@ import { RateDirective } from './course-list/crs-detail/rate.directive';
     CrsDetailComponent,
     ActualizationCrsDirective,
     CourseLoadDirective,
-    RateDirective
+    RateDirective,
+    DurationPipe,
+    FilterPipe
   ],
   imports: [
     CommonModule,

@@ -1,5 +1,5 @@
 import {
-  Component, OnInit
+  Component, Input, OnInit, Output
 } from '@angular/core';
 
 
@@ -12,16 +12,18 @@ import {
 export class SearchComponent implements OnInit {
 
   public consoledElement: any;
+  @Input() cFilter: string;
+
   logging() {
-    this.consoledElement.log(this.consoledElement.data);
+    this.consoledElement.log(this.cFilter);
     this.consoledElement.data = null ? 'empty' : '';
   }
 
   constructor() {
-    this.consoledElement = console;
-    this.logging();
   }
 
   ngOnInit() {
+    this.consoledElement = console;
+    this.logging();
   }
 }

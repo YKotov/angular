@@ -1,4 +1,4 @@
-import {Component, OnInit, Output} from '@angular/core';
+import {Component, Input, OnInit, Output} from '@angular/core';
 import {CourseListService} from './course-list.service';
 import {Observable} from 'rxjs';
 import {Course} from '../../../models/course';
@@ -13,6 +13,7 @@ export class CourseListComponent implements OnInit {
 
   public courseItemArr: Observable<Course[]>;
   @Output() public maxPerPage = 8;
+  public cFilter: string;
 
 
   constructor(private courseItem: CourseListService) {

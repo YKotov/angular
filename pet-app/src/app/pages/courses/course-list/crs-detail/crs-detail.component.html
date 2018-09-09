@@ -10,7 +10,7 @@
         <ng-template #elseBlock>&#9956;</ng-template>
       </h3>
       <div>
-        <p>{{item.duration}}(min)</p>
+        <p>{{item.duration | duration }}</p>
         <p>{{item.data | date:'dd-MM-yyyy' }}</p>
       </div>
     </div>

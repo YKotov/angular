@@ -1,3 +1,3 @@
-<div *ngFor="let item of courseItemArr | async; let i=index"   id="{{item._id}}">
+<div *ngFor="let item of courseItemArr | async | filter:cFilter; let i=index"   id="{{item._id}}">
   <app-crs-detail [item]=item (consoledElement)=loggerEvent($event) *ngIf="i<maxPerPage"></app-crs-detail>
 </div>
