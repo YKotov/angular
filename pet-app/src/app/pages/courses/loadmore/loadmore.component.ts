@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
+
 
 @Component({
   selector: 'app-loadmore',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoadmoreComponent implements OnInit {
 
-  constructor() { }
+  @Input() public elements: boolean;
+  constructor() {
+  }
 
   ngOnInit() {
+    this.elements = false;
   }
 
 }

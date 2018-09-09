@@ -10,6 +10,8 @@ import {HttpClientModule} from '@angular/common/http';
 import {FormsModule} from '@angular/forms';
 import {CrsDetailComponent} from './course-list/crs-detail/crs-detail.component';
 import { ActualizationCrsDirective } from './course-list/crs-detail/actualization-crs.directive';
+import { CourseLoadDirective } from './loadmore/course-load.directive';
+import { RateDirective } from './course-list/crs-detail/rate.directive';
 
 
 @NgModule({
@@ -20,7 +22,9 @@ import { ActualizationCrsDirective } from './course-list/crs-detail/actualizatio
     CourseListComponent,
     LoadmoreComponent,
     CrsDetailComponent,
-    ActualizationCrsDirective
+    ActualizationCrsDirective,
+    CourseLoadDirective,
+    RateDirective
   ],
   imports: [
     CommonModule,

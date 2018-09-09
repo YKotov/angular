@@ -8,4 +8,5 @@ export class Course implements ICourses {
   data: '';
   duration: 0;
   description: '';
+  rate: false;
 }

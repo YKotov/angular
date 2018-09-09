@@ -5,4 +5,5 @@ export interface ICourses {
   data: any;
   duration: number;
   description: string;
+  rate: boolean;
 }
