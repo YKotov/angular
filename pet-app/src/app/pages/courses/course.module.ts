@@ -14,6 +14,7 @@ import { CourseLoadDirective } from './loadmore/course-load.directive';
 import { RateDirective } from './course-list/crs-detail/rate.directive';
 import { DurationPipe } from './course-list/crs-detail/duration.pipe';
 import { FilterPipe } from './search/filter.pipe';
+import {DataSharingService} from "./data-sharing.service";
 
 
 @NgModule({
@@ -38,7 +39,7 @@ import { FilterPipe } from './search/filter.pipe';
   exports: [
     CoursePageComponent,
   ],
-  providers: [CourseListService, ActualizationCrsDirective]
+  providers: [CourseListService, ActualizationCrsDirective, DataSharingService]
 })
 export class CourseModule {
 }
