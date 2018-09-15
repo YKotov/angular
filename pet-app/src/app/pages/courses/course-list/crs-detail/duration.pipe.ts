@@ -14,7 +14,7 @@ export class DurationPipe implements PipeTransform {
 
     const hDisplay = h > 0 ? h + (h === 1 ? 'h ' : 'h ') : '';
     const mDisplay = m > 0 ? m + (m === 1 ? ' min' : ' mins') : '';
-    console.log( hDisplay + mDisplay);
+
     return hDisplay + mDisplay;
   }
 }
