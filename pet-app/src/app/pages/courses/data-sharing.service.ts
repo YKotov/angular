@@ -10,7 +10,7 @@ export class DataSharingService {
   constructor() {
   }
 
-  changeMessage(filtered: string) {
+  serchedString(filtered: string) {
     this.searchedElement.next(filtered);
   }
 }

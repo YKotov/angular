@@ -1,7 +1,7 @@
 <div class="actions-wrapp">
   <div class="search-wrapp">
-    <input type="text" [(ngModel)]="cFilter"  placeholder="Name, topic or date" class="search">
-    <button (click)="newMessage()">Search</button>
+    <input type="text" [(ngModel)]="cFilter" (keyup)="search()"  placeholder="Name, topic or date" class="search">
+    <button (click)="logging()">Search</button>
   </div>
   <div class="add-more">
     <button>Add more!</button>

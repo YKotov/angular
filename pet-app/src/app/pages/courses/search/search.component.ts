@@ -12,12 +12,10 @@ import {DataSharingService} from '../data-sharing.service';
 
 export class SearchComponent implements OnInit {
 
-  public consoledElement: any;
-  cFilter: string;
+  public cFilter: string;
 
   logging() {
-    this.consoledElement.log(this.cFilter);
-    this.consoledElement.data = null ? 'empty' : '';
+    console.log(this.cFilter);
   }
 
   constructor(private data: DataSharingService) {
@@ -27,7 +25,7 @@ export class SearchComponent implements OnInit {
     this.data.getSearchedElement.subscribe(cFilter => this.cFilter = cFilter);
   }
 
-  newMessage() {
-    this.data.changeMessage(this.cFilter);
+  search() {
+    this.data.serchedString(this.cFilter);
   }
 }
