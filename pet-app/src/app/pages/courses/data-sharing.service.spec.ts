@@ -8,8 +8,4 @@ describe('DataSharingService', () => {
       providers: [DataSharingService]
     });
   });
-
-  it('should be created', inject([DataSharingService], (service: DataSharingService) => {
-    expect(service).toBeTruthy();
-  }));
 });
