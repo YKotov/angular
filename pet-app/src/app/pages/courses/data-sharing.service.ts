@@ -10,7 +10,7 @@ export class DataSharingService {
   constructor() {
   }
 
-  serchedString(filtered: string) {
+  searchedString(filtered: string) {
     this.searchedElement.next(filtered);
   }
 }

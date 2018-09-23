@@ -17,7 +17,7 @@ export class CourseListComponent implements OnInit {
   public cFilter: string;
 
 
-  constructor(private courseItem: CourseListService, private data: DataSharingService) {
+  constructor(private courseItem: CourseListService, private dataSharingService: DataSharingService) {
   }
 
   loggerEvent(event) {
@@ -26,6 +26,6 @@ export class CourseListComponent implements OnInit {
 
   ngOnInit() {
     this.courseItemArr = this.courseItem.getCourseItem();
-    this.data.getSearchedElement.subscribe(cFilter => this.cFilter = cFilter);
+    this.dataSharingService.getSearchedElement.subscribe(cFilter => this.cFilter = cFilter);
   }
 }

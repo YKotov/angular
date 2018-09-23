@@ -14,7 +14,8 @@ import { CourseLoadDirective } from './loadmore/course-load.directive';
 import { RateDirective } from './course-list/crs-detail/rate.directive';
 import { DurationPipe } from './course-list/crs-detail/duration.pipe';
 import { FilterPipe } from './search/filter.pipe';
-import {DataSharingService} from "./data-sharing.service";
+import {DataSharingService} from './data-sharing.service';
+import { SortingPipe } from './course-list/sorting.pipe';
 
 
 @NgModule({
@@ -29,7 +30,8 @@ import {DataSharingService} from "./data-sharing.service";
     CourseLoadDirective,
     RateDirective,
     DurationPipe,
-    FilterPipe
+    FilterPipe,
+    SortingPipe
   ],
   imports: [
     CommonModule,

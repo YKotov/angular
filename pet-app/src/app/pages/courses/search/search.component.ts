@@ -18,14 +18,14 @@ export class SearchComponent implements OnInit {
     console.log(this.cFilter);
   }
 
-  constructor(private data: DataSharingService) {
+  constructor(private dataSharingService: DataSharingService) {
   }
 
   ngOnInit() {
-    this.data.getSearchedElement.subscribe(cFilter => this.cFilter = cFilter);
+    this.dataSharingService.getSearchedElement.subscribe(cFilter => this.cFilter = cFilter);
   }
 
   search() {
-    this.data.serchedString(this.cFilter);
+    this.dataSharingService.searchedString(this.cFilter);
   }
 }
