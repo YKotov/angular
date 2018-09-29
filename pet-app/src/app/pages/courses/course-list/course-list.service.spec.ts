@@ -8,8 +8,4 @@ describe('CourseListService', () => {
       providers: [CourseListService]
     });
   });
-
-  it('should be created', inject([CourseListService], (service: CourseListService) => {
-    expect(service).toBeTruthy();
-  }));
 });

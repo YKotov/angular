@@ -1,6 +1,7 @@
 import {
-  Component, OnInit
+  Component, Input, OnInit, Output
 } from '@angular/core';
+import {DataSharingService} from '../data-sharing.service';
 
 
 @Component({
@@ -11,17 +12,20 @@ import {
 
 export class SearchComponent implements OnInit {
 
-  public consoledElement: any;
+  public cFilter: string;
+
   logging() {
-    this.consoledElement.log(this.consoledElement.data);
-    this.consoledElement.data = null ? 'empty' : '';
+    console.log(this.cFilter);
   }
 
-  constructor() {
-    this.consoledElement = console;
-    this.logging();
+  constructor(private dataSharingService: DataSharingService) {
   }
 
   ngOnInit() {
+    this.dataSharingService.getSearchedElement.subscribe(cFilter => this.cFilter = cFilter);
+  }
+
+  search() {
+    this.dataSharingService.searchedString(this.cFilter);
   }
 }

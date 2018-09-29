@@ -1,14 +1,15 @@
-<div class="content-item">
+<div class="content-item" [appActualizationCrs]="item.data">
   <div class="left-part">
     <div class="head-part">
-      <h3 *ngIf="item.index == 0"> Course entry</h3>
-      <h3 *ngIf="item.index > 0"> Course {{item.index}}</h3>
+      <h3>{{item.title | uppercase}} |
+        <span *ngIf="item.rate; else elseBlock">&#9733;</span>
+        <ng-template #elseBlock>&#9956;</ng-template>
+      </h3>
       <div>
-        <p>{{item.duration}}(min)</p>
-        <p>{{item.date | date }}</p>
+        <p>{{item.duration | duration }}</p>
+        <p>{{item.data | date:'dd-MM-yyyy' }}</p>
       </div>
     </div>
-    <h4>{{item.title}}</h4>
     <p>{{item.description}}</p>
   </div>
   <div class="right-part">

@@ -9,6 +9,7 @@ import {Course} from '../../../../models/course';
 export class CrsDetailComponent implements OnInit {
 
   @Input() public item: Course;
+  @Input() public i;
   @Output() consoledElement: any = new EventEmitter();
 
   constructor() {

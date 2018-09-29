@@ -1,7 +1,8 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, Input, OnInit, Output} from '@angular/core';
 import {CourseListService} from './course-list.service';
 import {Observable} from 'rxjs';
 import {Course} from '../../../models/course';
+import {DataSharingService} from '../data-sharing.service';
 
 @Component({
   selector: 'app-course-content',
@@ -12,8 +13,11 @@ import {Course} from '../../../models/course';
 export class CourseListComponent implements OnInit {
 
   public courseItemArr: Observable<Course[]>;
+  public maxPerPage = 8;
+  public cFilter: string;
 
-  constructor(private courseItem: CourseListService) {
+
+  constructor(private courseItem: CourseListService, private dataSharingService: DataSharingService) {
   }
 
   loggerEvent(event) {
@@ -22,5 +26,6 @@ export class CourseListComponent implements OnInit {
 
   ngOnInit() {
     this.courseItemArr = this.courseItem.getCourseItem();
+    this.dataSharingService.getSearchedElement.subscribe(cFilter => this.cFilter = cFilter);
   }
 }
