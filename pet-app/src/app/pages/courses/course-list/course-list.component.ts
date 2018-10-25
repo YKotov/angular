@@ -15,6 +15,7 @@ export class CourseListComponent implements OnInit {
   public courseItemArr: Observable<Course[]>;
   public maxPerPage = 8;
   public cFilter: string;
+  public contentCours;
 
 
   constructor(private courseItem: CourseListService, private dataSharingService: DataSharingService) {
@@ -24,8 +25,13 @@ export class CourseListComponent implements OnInit {
     console.log('id: ' + event);
   }
 
+  deleteItem(removedIteme: string) {
+    this.courseItem.courseItemRemove(removedIteme);
+  }
+
   ngOnInit() {
     this.courseItemArr = this.courseItem.getCourseItem();
+    this.contentCours = Object.values(this.courseItemArr);
     this.dataSharingService.getSearchedElement.subscribe(cFilter => this.cFilter = cFilter);
   }
 }

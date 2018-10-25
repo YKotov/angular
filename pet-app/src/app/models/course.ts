@@ -2,11 +2,13 @@ import {ICourses} from './ICourses';
 
 
 export class Course implements ICourses {
-  _id: 0;
-  index: 0;
-  title: '';
-  data: '';
-  duration: 0;
-  description: '';
-  rate: false;
+  constructor(
+    public _id = 0,
+    public index = 0,
+    public title = '',
+    public data = '',
+    public duration = 0,
+    public description = '',
+    public rate = false,
+  ) {}
 }

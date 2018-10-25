@@ -7,11 +7,11 @@ import {Course} from '../../../models/course';
 })
 export class SortingPipe implements PipeTransform {
   transform(array: Course[], field: Date): Course[] {
-    for(let key in array) {
+    for (let key in array) {
       array.sort((a: any, b: any) => {
-        if (a.data < b.data) {
+        if (a.data > b.data) {
           return -1;
-        } else if (a.data > b.data) {
+        } else if (a.data < b.data) {
           return 1;
         } else {
           return 0;
