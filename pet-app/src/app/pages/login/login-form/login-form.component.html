@@ -1,0 +1,9 @@
+<article class="login-form" [style.right]="formAppear">
+  <label for="name">Nickname
+    <input name="name" [(ngModel)]="nickname" value={{nickname}} type="text">
+  </label>
+  <!--<label for="password">Password-->
+    <!--<input name='password' [(ngModel)]="password" value={{password}} type="text">-->
+  <!--</label>-->
+  <button (click)="loginActionEv(nickname)" >Login</button>
+</article>

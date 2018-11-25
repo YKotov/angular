@@ -10,8 +10,8 @@ export class FilterPipe implements PipeTransform {
     if (!items || !cFilter) {
       return items;
     }
-
-    return items.filter(item => item.title.toLowerCase().indexOf(cFilter.toLowerCase()) > -1);
+    const result = items.filter(item => item.title.toLowerCase().indexOf(cFilter.toLowerCase()) > -1);
+    return result;
   }
 
 }

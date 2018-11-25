@@ -2,20 +2,5 @@ header{
   width: 100%;
   border-bottom: 1px solid;
   padding: 5px 0;
-}
-
-
-
-header button{
-  height: 50px;
-  width: 200px;
-  border: 1px solid;
-  color: black;
-  background: aquamarine;
-  margin: 0 10px;
-}
-
-header .btn-block{
   display: flex;
-  align-items: center;
 }

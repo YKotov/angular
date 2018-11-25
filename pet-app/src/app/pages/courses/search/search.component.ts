@@ -2,6 +2,9 @@ import {
   Component, Input, OnInit, Output
 } from '@angular/core';
 import {DataSharingService} from '../data-sharing.service';
+import {Observable} from 'rxjs';
+import {Course} from '../../../models/course';
+import {CourseListService} from '../course-list/course-list.service';
 
 
 @Component({
@@ -11,14 +14,9 @@ import {DataSharingService} from '../data-sharing.service';
 })
 
 export class SearchComponent implements OnInit {
-
   public cFilter: string;
 
-  logging() {
-    console.log(this.cFilter);
-  }
-
-  constructor(private dataSharingService: DataSharingService) {
+  constructor(private dataSharingService: DataSharingService, private courseItem: CourseListService) {
   }
 
   ngOnInit() {
@@ -27,5 +25,9 @@ export class SearchComponent implements OnInit {
 
   search() {
     this.dataSharingService.searchedString(this.cFilter);
+  }
+
+  clearSearch() {
+    this.cFilter = '';
   }
 }

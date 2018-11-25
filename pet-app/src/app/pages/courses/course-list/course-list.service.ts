@@ -6,95 +6,92 @@ import {Course} from '../../../models/course';
 @Injectable()
 export class CourseListService {
 
-  private dataJ = [
-    {
-      '_id': '5b66cfd640efb6ae4884dfb7',
-      'title': 'Ahoy world',
-      'index': 0,
-      'description': 'Ut officia labore irure et magna nostrud. Eiusmod adipisicing in velit ipsum culpa et. Et sunt anim velit anim aute eu. Fugiat duis et aute sunt. Enim incididunt do est quis esse est culpa anim reprehenderit. Mollit cillum dolore qui duis do nostrud minim id est anim proident amet reprehenderit ex. Dolore minim laboris dolor fugiat consectetur est labore cillum ut ex velit excepteur.\r\n',
-      'data': '2020-05-30T07:52:07-02:00',
-      'duration': '157',
-      'rate': false
-    },
-    {
-      '_id': '5b66cfd65efd0619185400ca',
-      'title': 'Privet world',
-      'index': 1,
-      'description': 'Adipisicing anim consectetur adipisicing irure veniam veniam nostrud tempor laboris. Eiusmod excepteur reprehenderit in culpa aliquip Lorem in consectetur voluptate sunt cupidatat consectetur dolor. Culpa aliquip magna laboris duis culpa in quis dolore nisi excepteur nostrud non ad. Fugiat consectetur elit deserunt dolore exercitation. Consectetur sunt qui et ea tempor quis ad fugiat.\r\n',
-      'data': '2015-05-30T07:52:07-02:00',
-      'duration': '63',
-      'rate': true
-    },
-    {
-      '_id': '5b66cfd6f102f7aa1b91cec6',
-      'title': 'Gritting world',
-      'index': 2,
-      'description': 'Laborum sunt incididunt sint aliquip elit ad anim consectetur. Exercitation aliquip ex amet pariatur consequat esse id aliqua anim dolore qui dolor. Pariatur aliquip ad cillum irure mollit esse proident reprehenderit exercitation. Nulla excepteur duis Lorem minim ullamco aute laborum. Esse fugiat elit tempor ea est anim tempor. Magna elit mollit minim velit elit ea.\r\n',
-      'data': '2015-09-16T11:13:31-02:00',
-      'duration': '24',
-      'rate': false
-    },
-    {
-      '_id': '5b66cfd603b75636371634fc',
-      'title': 'Aloha world',
-      'index': 3,
-      'description': 'Do incididunt in nisi sit incididunt consectetur. Incididunt irure mollit consectetur ut incididunt Lorem deserunt. Nulla voluptate sunt eu occaecat duis aute cillum excepteur cupidatat culpa occaecat mollit labore qui.\r\n',
-      'data': '2018-09-07T09:08:55-02:00',
-      'duration': '25',
-      'rate': false
-    },
-    {
-      '_id': '5b66cfd657119adaa7d796b8',
-      'title': 'Hi world',
-      'index': 4,
-      'description': 'Cillum voluptate culpa enim laboris magna sunt duis pariatur magna. Et adipisicing nisi duis ullamco laborum occaecat labore. Consequat reprehenderit occaecat labore sunt qui et deserunt voluptate dolor. Ad laboris amet officia Lorem veniam ad. Laboris amet anim occaecat excepteur est velit esse nisi aute ex. Esse ex et est ullamco aliquip officia magna culpa cupidatat.\r\n',
-      'data': '2018-09-20T02:42:00-02:00',
-      'duration': '147',
-      'rate': true
-    },
-    {
-      '_id': '5b66cfd6da9ce308b3435c01',
-      'title': 'Hello world',
-      'index': 5,
-      'description': 'Culpa consequat consequat reprehenderit aute ut ea dolor ad sit proident. Incididunt exercitation cupidatat anim labore. Nulla non dolor voluptate ea velit consectetur Lorem non eiusmod. Nulla velit et fugiat magna non ut consectetur quis fugiat. Culpa magna minim amet laboris quis sint ipsum fugiat est et ut voluptate deserunt. Voluptate mollit id reprehenderit dolor ipsum officia ullamco enim non laboris incididunt et aliquip laboris. Cupidatat est et et velit ex.\r\n',
-      'data': '2018-01-24T02:29:17-02:00',
-      'duration': '25',
-      'rate': false
-    },
-    {
-      '_id': '5b66cfd6a62c86fb302435d3',
-      'title': 'Good day world',
-      'index': 6,
-      'description': 'Lorem mollit nisi commodo aute fugiat enim in do. Sit do qui dolor eu est irure. Nulla id deserunt cupidatat aliquip irure consequat.\r\n',
-      'data': '2018-09-27T12:32:15-02:00',
-      'duration': '11',
-      'rate': false
-    },
-    {
-      '_id': '5b66cfd6a62c86fb30242dd3',
-      'title': 'Amazing end',
-      'index': 7,
-      'description': 'Lorem mollit nisi commodo aute fugiat enim in do. Sit do qui dolor eu est irure. Nulla id deserunt cupidatat aliquip irure consequat.\r\n',
-      'data': '2019-05-10T06:45:46-04:00',
-      'duration': '33',
-      'rate': true
+    private dataJ = [
+        {
+            '_id': '5b66cfd640efb6ae4884dfb7',
+            'title': 'Ahoy world',
+            'index': 0,
+            'description': 'Ut officia labore irure et magna nostrud. Eiusmod adipisicing in velit ipsum culpa et. Et sunt anim velit anim aute eu. Fugiat duis et aute sunt. Enim incididunt do est quis esse est culpa anim reprehenderit. Mollit cillum dolore qui duis do nostrud minim id est anim proident amet reprehenderit ex. Dolore minim laboris dolor fugiat consectetur est labore cillum ut ex velit excepteur.\r\n',
+            'data': '2020-05-30T07:52:07-02:00',
+            'duration': '157',
+            'rate': false
+        },
+        {
+            '_id': '5b66cfd65efd0619185400ca',
+            'title': 'Privet world',
+            'index': 1,
+            'description': 'Adipisicing anim consectetur adipisicing irure veniam veniam nostrud tempor laboris. Eiusmod excepteur reprehenderit in culpa aliquip Lorem in consectetur voluptate sunt cupidatat consectetur dolor. Culpa aliquip magna laboris duis culpa in quis dolore nisi excepteur nostrud non ad. Fugiat consectetur elit deserunt dolore exercitation. Consectetur sunt qui et ea tempor quis ad fugiat.\r\n',
+            'data': '2015-05-30T07:52:07-02:00',
+            'duration': '63',
+            'rate': true
+        },
+        {
+            '_id': '5b66cfd6f102f7aa1b91cec6',
+            'title': 'Gritting world',
+            'index': 2,
+            'description': 'Laborum sunt incididunt sint aliquip elit ad anim consectetur. Exercitation aliquip ex amet pariatur consequat esse id aliqua anim dolore qui dolor. Pariatur aliquip ad cillum irure mollit esse proident reprehenderit exercitation. Nulla excepteur duis Lorem minim ullamco aute laborum. Esse fugiat elit tempor ea est anim tempor. Magna elit mollit minim velit elit ea.\r\n',
+            'data': '2015-09-16T11:13:31-02:00',
+            'duration': '24',
+            'rate': false
+        },
+        {
+            '_id': '5b66cfd603b75636371634fc',
+            'title': 'Aloha world',
+            'index': 3,
+            'description': 'Do incididunt in nisi sit incididunt consectetur. Incididunt irure mollit consectetur ut incididunt Lorem deserunt. Nulla voluptate sunt eu occaecat duis aute cillum excepteur cupidatat culpa occaecat mollit labore qui.\r\n',
+            'data': '2018-09-07T09:08:55-02:00',
+            'duration': '25',
+            'rate': false
+        },
+        {
+            '_id': '5b66cfd657119adaa7d796b8',
+            'title': 'Hi world',
+            'index': 4,
+            'description': 'Cillum voluptate culpa enim laboris magna sunt duis pariatur magna. Et adipisicing nisi duis ullamco laborum occaecat labore. Consequat reprehenderit occaecat labore sunt qui et deserunt voluptate dolor. Ad laboris amet officia Lorem veniam ad. Laboris amet anim occaecat excepteur est velit esse nisi aute ex. Esse ex et est ullamco aliquip officia magna culpa cupidatat.\r\n',
+            'data': '2018-09-20T02:42:00-02:00',
+            'duration': '147',
+            'rate': true
+        },
+        {
+            '_id': '5b66cfd6da9ce308b3435c01',
+            'title': 'Hello world',
+            'index': 5,
+            'description': 'Culpa consequat consequat reprehenderit aute ut ea dolor ad sit proident. Incididunt exercitation cupidatat anim labore. Nulla non dolor voluptate ea velit consectetur Lorem non eiusmod. Nulla velit et fugiat magna non ut consectetur quis fugiat. Culpa magna minim amet laboris quis sint ipsum fugiat est et ut voluptate deserunt. Voluptate mollit id reprehenderit dolor ipsum officia ullamco enim non laboris incididunt et aliquip laboris. Cupidatat est et et velit ex.\r\n',
+            'data': '2018-01-24T02:29:17-02:00',
+            'duration': '25',
+            'rate': false
+        },
+        {
+            '_id': '5b66cfd6a62c86fb302435d3',
+            'title': 'Good day world',
+            'index': 6,
+            'description': 'Lorem mollit nisi commodo aute fugiat enim in do. Sit do qui dolor eu est irure. Nulla id deserunt cupidatat aliquip irure consequat.\r\n',
+            'data': '2018-09-27T12:32:15-02:00',
+            'duration': '11',
+            'rate': false
+        },
+        {
+            '_id': '5b66cfd6a62c86fb30242dd3',
+            'title': 'Amazing end',
+            'index': 7,
+            'description': 'Lorem mollit nisi commodo aute fugiat enim in do. Sit do qui dolor eu est irure. Nulla id deserunt cupidatat aliquip irure consequat.\r\n',
+            'data': '2019-05-10T06:45:46-04:00',
+            'duration': '33',
+            'rate': true
+        }
+    ];
+    
+    constructor(private http: HttpClient) {
     }
-  ];
-  private removeItem;
 
-  constructor(private http: HttpClient) {
-  }
-
-  getCourseItem(): Observable<Course[]> {
-    return Observable.create(this.dataJ);
-  }
-
-  courseItemRemove(removeItem: string) {
-    const index: number = this.dataJ.indexOf(removeItem['_id']);
-    console.log(index);
-    console.log(removeItem['_id']);
-    if (index !== -1) {
-      this.dataJ.splice(index, 1);
+    public getCourseItem(): Observable<Course[]> {
+        return Observable.create(this.dataJ);
     }
-  }
+
+    public courseItemRemove(removeItem: string) {
+        if (removeItem) {
+            const index = this.dataJ.findIndex(order => order._id === removeItem);
+            this.dataJ.splice(index, 1);
+        }
+    }
 }

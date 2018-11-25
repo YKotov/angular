@@ -1,0 +1,23 @@
+button{
+  height: 50px;
+  width: 200px;
+  border: 1px solid;
+  color: black;
+  background: aquamarine;
+  margin: 0 10px;
+}
+
+.btn-block{
+  display: flex;
+  align-items: center;
+}
+
+.default{
+  background: aquamarine;
+  color: black;
+}
+
+.activeForm {
+  background: red;
+  color: white;
+}

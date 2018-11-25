@@ -1,0 +1,7 @@
+<div class="btn-block">
+  <button (click)="showLoginForm()"  ngClass={{loginCl}}>{{loginValue}}</button>
+  <button (click)="logoutAction()">Log off</button>
+  <app-login-form [formAppear]="formAppear"  (nicknameInput)="loginAction($event)"></app-login-form>
+</div>
+
+
