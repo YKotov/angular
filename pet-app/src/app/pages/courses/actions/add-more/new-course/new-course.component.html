@@ -1,0 +1,28 @@
+<article class="new-course-form">
+  <label for="title">Title
+    <input type="text" name="title">
+  </label>
+
+  <label for="desc">Description
+    <textarea type="text" name="desc"></textarea>
+  </label>
+
+  <label for="date">Date
+    <input type="date" name="date">
+  </label>
+  <div class="duration">
+    <label for="duration">Duration
+      <input type="text" name="duration" [(ngModel)]="duration">
+    </label>
+    <span>{{ duration | duration }}</span>
+  </div>
+  <label for="authors">Authors
+    <input type="text" name="authors">
+  </label>
+
+
+  <div class="wrapper">
+    <button>Save</button>
+    <button>Cancel</button>
+  </div>
+</article>

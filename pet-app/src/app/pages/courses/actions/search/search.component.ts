@@ -1,10 +1,10 @@
 import {
   Component, Input, OnInit, Output
 } from '@angular/core';
-import {DataSharingService} from '../data-sharing.service';
+import {DataSharingService} from '../../data-sharing.service';
 import {Observable} from 'rxjs';
-import {Course} from '../../../models/course';
-import {CourseListService} from '../course-list/course-list.service';
+import {Course} from '../../../../models/course';
+import {CourseListService} from '../../course-list/course-list.service';
 
 
 @Component({
