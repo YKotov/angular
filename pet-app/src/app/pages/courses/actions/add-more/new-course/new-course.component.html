@@ -12,7 +12,7 @@
   </label>
   <div class="duration">
     <label for="duration">Duration
-      <input type="text" name="duration" [(ngModel)]="duration">
+      <input type="number" max="1000" name="duration" [(ngModel)]="duration">
     </label>
     <span>{{ duration | duration }}</span>
   </div>
@@ -23,6 +23,6 @@
 
   <div class="wrapper">
     <button>Save</button>
-    <button>Cancel</button>
+    <button (click)="closeFormEv(true)">Cancel</button>
   </div>
 </article>

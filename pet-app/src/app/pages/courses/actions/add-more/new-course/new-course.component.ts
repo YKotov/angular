@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 
 @Component({
   selector: 'app-new-course',
@@ -8,11 +8,16 @@ import {Component, OnInit} from '@angular/core';
 export class NewCourseComponent implements OnInit {
 
   public duration: number;
+  @Output() closeForm: any = new EventEmitter();
 
   constructor() {
   }
 
   ngOnInit() {
+  }
+
+  closeFormEv(e) {
+    this.closeForm.emit(e);
   }
 
 }

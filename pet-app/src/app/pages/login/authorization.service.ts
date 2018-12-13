@@ -26,11 +26,11 @@ export class AuthorizationService {
     localStorage.setItem('users', JSON.stringify({users: users}));
   }
 
-  public IsAuthenticated(){
-    if( this.getUser().length > 0 ){
+  public IsAuthenticated() {
+    if (this.getUser().length > 0) {
       return true;
-    }else {
-        return false;
+    } else {
+      return false;
     }
   }
 }

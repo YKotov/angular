@@ -1,4 +1,4 @@
 <div class="add-more">
-  <button>Add more!</button>
-  <app-new-course></app-new-course>
+  <button (click)="addMoreForm()">Add more!</button>
+  <app-new-course class="add-more-el" ngClass={{formAppearCl}} (closeForm)="closeAddMoreForm()"></app-new-course>
 </div>

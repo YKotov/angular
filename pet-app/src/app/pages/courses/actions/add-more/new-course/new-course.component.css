@@ -1,16 +1,3 @@
-.new-course-form {
-  width:80%;
-  height:auto;
-  position:fixed;
-  left:0;
-  right:0;
-  top:10%;
-  margin:0 auto;
-  z-index:100;
-  background: rgba(0,0,0,0.8);
-  border: 3px solid #000;
-}
-
 label{
   display:flex;
   flex-direction:column;

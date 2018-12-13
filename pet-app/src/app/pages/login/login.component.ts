@@ -41,11 +41,9 @@ export class LoginComponent implements OnInit {
     this.authService.addUser($event);
     console.log('You successful login into my beautiful app');
     if ( this.authService.IsAuthenticated() ) {
-
       this.formAppear = '-400px';
       this.loginValue = 'Login';
       this.loginCl = 'default';
-
     }
   }
 
