@@ -21,7 +21,7 @@ export class CourseListService {
             'title': 'Privet world',
             'index': 1,
             'description': 'Adipisicing anim consectetur adipisicing irure veniam veniam nostrud tempor laboris. Eiusmod excepteur reprehenderit in culpa aliquip Lorem in consectetur voluptate sunt cupidatat consectetur dolor. Culpa aliquip magna laboris duis culpa in quis dolore nisi excepteur nostrud non ad. Fugiat consectetur elit deserunt dolore exercitation. Consectetur sunt qui et ea tempor quis ad fugiat.\r\n',
-            'data': '2015-05-30T07:52:07-02:00',
+            'data': '2018-12-11T07:52:07-02:00',
             'duration': '63',
             'rate': true
         },
