@@ -1,3 +1,3 @@
-<div *ngFor="let item of contentCours[1] | filter:cFilter | sorting; let i=index"   id="{{item._id}}">
+<div *ngFor="let item of contentCours[1] | filter:cFilter | sorting ; let i=index"   id="{{item._id}}">
   <app-crs-detail [item]=item [i]="i" (consoledElement)=deleteItem($event) *ngIf="i<maxPerPage"></app-crs-detail>
 </div>

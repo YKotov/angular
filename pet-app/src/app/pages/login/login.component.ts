@@ -1,10 +1,11 @@
-import {Component, OnInit} from '@angular/core';
+import {ChangeDetectionStrategy, Component, OnInit} from '@angular/core';
 import {AuthorizationService} from './authorization.service';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css']
+  styleUrls: ['./login.component.css'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class LoginComponent implements OnInit {
   public formAppear: string;
@@ -38,7 +39,7 @@ export class LoginComponent implements OnInit {
   }
 
   loginAction($event) {
-    if ($event.length > 0) {
+    if ($event) {
       this.authService.addUser($event);
       console.log('You successful login into my beautiful app');
     }

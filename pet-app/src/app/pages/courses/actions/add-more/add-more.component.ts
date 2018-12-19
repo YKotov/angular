@@ -1,10 +1,11 @@
-import {Component, OnInit} from '@angular/core';
+import {ChangeDetectionStrategy, Component, OnInit} from '@angular/core';
 import {AuthorizationService} from '../../../login/authorization.service';
 
 @Component({
   selector: 'app-add-more',
   templateUrl: './add-more.component.html',
-  styleUrls: ['./add-more.component.css']
+  styleUrls: ['./add-more.component.css'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class AddMoreComponent implements OnInit {
 
