@@ -2,7 +2,7 @@ import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {CoursePageComponent} from './course-page.component';
 import {BreadcrumbsComponent} from './breadcrumbs/breadcrumbs.component';
-import {SearchComponent} from './actions/search/search.component';
+import {SearchComponent} from './search-and-add/search/search.component';
 import {CourseListComponent} from './course-list/course-list.component';
 import {LoadmoreComponent} from './loadmore/loadmore.component';
 import {CourseListService} from './course-list/course-list.service';
@@ -13,12 +13,14 @@ import { ActualizationCrsDirective } from './course-list/crs-detail/actualizatio
 import { CourseLoadDirective } from './loadmore/course-load.directive';
 import { RateDirective } from './course-list/crs-detail/rate.directive';
 import { DurationPipe } from './course-list/crs-detail/duration.pipe';
-import { FilterPipe } from './actions/search/filter.pipe';
+import { FilterPipe } from './search-and-add/search/filter.pipe';
 import {DataSharingService} from './data-sharing.service';
 import { SortingPipe } from './course-list/sorting.pipe';
-import { ActionsComponent } from './actions/actions.component';
-import { AddMoreComponent } from './actions/add-more/add-more.component';
-import { NewCourseComponent } from './actions/add-more/new-course/new-course.component';
+import { ActionsComponent } from './search-and-add/actions.component';
+import { AddMoreComponent } from './search-and-add/add-new-course/add-more.component';
+import { NewCourseComponent } from './search-and-add/add-new-course/new-course/new-course.component';
+import { DurationComponent } from './search-and-add/add-new-course/new-course/duration/duration.component';
+import { DateComponent } from './search-and-add/add-new-course/new-course/date/date.component';
 
 
 @NgModule({
@@ -38,6 +40,8 @@ import { NewCourseComponent } from './actions/add-more/new-course/new-course.com
     ActionsComponent,
     AddMoreComponent,
     NewCourseComponent,
+    DurationComponent,
+    DateComponent,
   ],
   imports: [
     CommonModule,

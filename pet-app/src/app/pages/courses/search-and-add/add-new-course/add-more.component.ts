@@ -9,7 +9,7 @@ import {AuthorizationService} from '../../../login/authorization.service';
 })
 export class AddMoreComponent implements OnInit {
 
-  public formAppearCl: string;
+  public formAppearCl: boolean;
 
   constructor(private authService: AuthorizationService) {
   }
@@ -19,14 +19,14 @@ export class AddMoreComponent implements OnInit {
 
   addMoreForm() {
     if (this.authService.IsAuthenticated()) {
-      this.formAppearCl = 'show-add-form';
+      this.formAppearCl = true;
     } else {
       console.log('You should login into account');
     }
   }
 
   closeAddMoreForm() {
-    this.formAppearCl = '';
+    this.formAppearCl = false;
     console.log('We did\'t clear the input field for continue filling');
   }
 }

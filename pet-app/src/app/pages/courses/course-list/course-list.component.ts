@@ -42,7 +42,10 @@ export class CourseListComponent implements OnInit {
     this.courseItemArr = this.courseItem.getCourseItem();
     this.contentCours = Object.values(this.courseItemArr);
 
+
     this.dataSharingService.getSearchedElement.subscribe(cFilter => this.cFilter = cFilter);
+    console.log(this.dataSharingService.getSearchedElement);
+
     this.cd.markForCheck();
     this.cd.detectChanges();
 

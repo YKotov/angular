@@ -7,15 +7,9 @@
     <textarea type="text" name="desc"></textarea>
   </label>
 
-  <label for="date">Date
-    <input type="date" name="date">
-  </label>
-  <div class="duration">
-    <label for="duration">Duration
-      <input type="number" max="1000" name="duration" [(ngModel)]="duration">
-    </label>
-    <span>{{ duration | duration }}</span>
-  </div>
+  <app-date></app-date>
+
+  <app-duration></app-duration>
   <label for="authors">Authors
     <input type="text" name="authors">
   </label>
