@@ -1,7 +1,6 @@
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {CoursePageComponent} from './course-page.component';
-import {BreadcrumbsComponent} from './breadcrumbs/breadcrumbs.component';
 import {SearchComponent} from './search-and-add/search/search.component';
 import {CourseListComponent} from './course-list/course-list.component';
 import {LoadmoreComponent} from './loadmore/loadmore.component';
@@ -26,7 +25,6 @@ import { DateComponent } from './search-and-add/add-new-course/new-course/date/d
 @NgModule({
   declarations: [
     CoursePageComponent,
-    BreadcrumbsComponent,
     SearchComponent,
     CourseListComponent,
     LoadmoreComponent,
