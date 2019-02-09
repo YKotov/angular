@@ -43,11 +43,9 @@ export class CourseListComponent implements OnInit {
     this.contentCours = Object.values(this.courseItemArr);
 
 
-    this.dataSharingService.getSearchedElement.subscribe(cFilter => this.cFilter = cFilter);
-    console.log(this.dataSharingService.getSearchedElement);
-
-    this.cd.markForCheck();
-    this.cd.detectChanges();
-
+    this.dataSharingService.getSearchedElement.subscribe(cFilter => {
+      this.cFilter = cFilter;
+      this.cd.markForCheck();
+    });
   }
 }
