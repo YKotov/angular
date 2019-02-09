@@ -1,10 +1,11 @@
-import {Component, OnInit} from '@angular/core';
+import {ChangeDetectionStrategy, Component, OnInit} from '@angular/core';
 import {AuthorizationService} from './authorization.service';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css']
+  styleUrls: ['./login.component.css'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class LoginComponent implements OnInit {
   public formAppear: string;
@@ -32,25 +33,25 @@ export class LoginComponent implements OnInit {
       this.loginCl = 'activeForm';
     }
 
-    if ( this.authService.IsAuthenticated() ) {
+    if (this.authService.IsAuthenticated()) {
       console.log('You logged as: ' + this.authService.getUser());
     }
   }
 
   loginAction($event) {
-    this.authService.addUser($event);
-    console.log('You successful login into my beautiful app');
-    if ( this.authService.IsAuthenticated() ) {
-
+    if ($event) {
+      this.authService.addUser($event);
+      console.log('You successful login into my beautiful app');
+    }
+    if (this.authService.IsAuthenticated()) {
       this.formAppear = '-400px';
       this.loginValue = 'Login';
       this.loginCl = 'default';
-
     }
   }
 
   logoutAction() {
-    if ( this.authService.IsAuthenticated() ) {
+    if (this.authService.IsAuthenticated()) {
       this.authService.removeUsers();
       console.log('You successful logout from app');
     } else {

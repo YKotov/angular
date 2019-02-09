@@ -1,0 +1,22 @@
+<article class="new-course-form">
+  <label for="title">Title
+    <input type="text" name="title">
+  </label>
+
+  <label for="desc">Description
+    <textarea type="text" name="desc"></textarea>
+  </label>
+
+  <app-date></app-date>
+
+  <app-duration></app-duration>
+  <label for="authors">Authors
+    <input type="text" name="authors">
+  </label>
+
+
+  <div class="wrapper">
+    <button>Save</button>
+    <button (click)="closeFormEv(true)">Cancel</button>
+  </div>
+</article>

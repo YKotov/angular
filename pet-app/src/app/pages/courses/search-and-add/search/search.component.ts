@@ -1,16 +1,17 @@
 import {
-  Component, Input, OnInit, Output
+  ChangeDetectionStrategy, ChangeDetectorRef, Component, Input, OnInit, Output
 } from '@angular/core';
-import {DataSharingService} from '../data-sharing.service';
+import {DataSharingService} from '../../data-sharing.service';
 import {Observable} from 'rxjs';
-import {Course} from '../../../models/course';
-import {CourseListService} from '../course-list/course-list.service';
+import {Course} from '../../../../models/course';
+import {CourseListService} from '../../course-list/course-list.service';
 
 
 @Component({
   selector: 'app-search',
   templateUrl: './search.component.html',
-  styleUrls: ['./search.component.css']
+  styleUrls: ['./search.component.css'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 
 export class SearchComponent implements OnInit {
